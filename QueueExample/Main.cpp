@@ -7,6 +7,16 @@ int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+
+	//MyQueue<Student> list;
+	// Student liza; //Який зберігає - ПІБ, вік
+	// Щоб так працювало треба дружні методи використати.
+	// cin>>liza; //ввід інформції про студента
+	// list.push(liza);
+	// Student petro;
+	// list.push(petro);
+	//count<<list<<"\n";
+
 	//черга із оцінок
 	MyQueue<int> marks;
 	marks.push(12);
