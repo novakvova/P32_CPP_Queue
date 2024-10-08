@@ -9,10 +9,13 @@ int main() {
 
 	//черга із оцінок
 	MyQueue<int> marks;
-	marks.Push(12);
-	marks.Push(10);
+	marks.push(12);
+	marks.push(10);
+	marks.push(11);
 
-	marks.Print();
+	marks.print();
+
+	cout << "Перший елемент у черзі " << marks.front() << "\n";
 
 	cout << "Привіт!\n";
 	return 0;

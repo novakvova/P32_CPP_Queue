@@ -9,7 +9,7 @@ private:
         Node* next;    // Вказівник на наступний вузол
 
         // Конструктор для ініціалізації вузла
-        Node(int val) : data(val), next(nullptr) {}
+        Node(T val) : data(val), next(nullptr) {}
     };
 
     Node* head; // Вказівник на голову списку
@@ -17,7 +17,7 @@ private:
 public:
     MyQueue() : head(nullptr) {}
 
-    void Push(T data) {
+    void push(T data) {
         //Якщо список є пустий
         if (head == nullptr) {
             Node* node = new Node(data);
@@ -36,7 +36,16 @@ public:
         }
     }
 
-    void Print() {
+    T& front() const {
+        if (head != nullptr) {
+            return head->data;
+        }
+        else {
+            return NULL;
+        }
+    }
+
+    void print() {
         //робимо тимчасовий вказівник - щоб не загубити голову.
         Node* temp = head;
         while (temp != nullptr) {
